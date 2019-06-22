@@ -8,7 +8,10 @@ class EditPost extends Component {
     body: '',
   }
 
-  componentDidMount() {
+  async componentDidMount() {
+    //dispatch single post to receive information based on :id from url
+    await this.props.getSinglePost( parseInt(this.props.match.params.id));
+    //set data from activePost to state
     this.setState(({ title, body }) => ({
       title: this.props.activePost.title,
       body: this.props.activePost.body,
@@ -28,6 +31,7 @@ class EditPost extends Component {
   };
 
   render() {
+    console.log(this.props)
     return (
       <Fragment>
         <form onSubmit={this.handleSubmit}>

@@ -10,8 +10,8 @@ class Posts extends React.Component {
 
   render() {
     const posts = (this.props.posts.map(post => (
-      <Fragment key={post.id + 666}>
-        <Link to={`posts/${post.id}`} key={post.id} className="link">{post.title}</Link>
+      <Fragment key={post.id}>
+        <Link to={`posts/${post.id}`} className="link">{post.title}</Link>
         <p>{`${post.body.slice(0, 150)}`} {post.body.length > 50 && '...'}</p>
       </Fragment>
     ))
