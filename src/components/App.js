@@ -21,7 +21,7 @@ function App() {
   return (
     <Provider store={store}>
       <Router>
-        <Link style={{display: 'block', textAlign:'center'}} to="/">Go home</Link>
+        <Link style={{ display: 'block', textAlign: 'center' }} to="/">Go home</Link>
         <div className="container">
           <Switch>
             <Route exact path="/" component={Posts} />

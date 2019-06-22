@@ -8,15 +8,15 @@ class EditPost extends Component {
     body: '',
   }
 
-    componentDidMount(){
-   this.setState(({title, body})=>({
-   title: this.props.activePost.title,
-   body: this.props.activePost.body,
-   }))
-   }
+  componentDidMount() {
+    this.setState(({ title, body }) => ({
+      title: this.props.activePost.title,
+      body: this.props.activePost.body,
+    }))
+  }
 
   handleInput = ({ target }) => {
-    this.setState((state)=>({...state, [target.id]: target.value}))
+    this.setState((state) => ({ ...state, [target.id]: target.value }))
   }
 
   handleSubmit = (e) => {
@@ -28,8 +28,6 @@ class EditPost extends Component {
   };
 
   render() {
-    console.log(this.props)
-    console.log(this.state)
     return (
       <Fragment>
         <form onSubmit={this.handleSubmit}>

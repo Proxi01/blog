@@ -20,7 +20,7 @@ export default function (state = initialState, action) {
     case types.CREATE_POST_SUCCESS:
       return { ...state, posts: [...state.posts, action.payload] };
     case types.UPDATE_POST_SUCCESS:
-      return {...state, activePost:{...state.activePost,...action.payload}}
+      return { ...state, activePost: { ...state.activePost, ...action.payload } }
 
 
     default:

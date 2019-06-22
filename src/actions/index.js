@@ -105,8 +105,8 @@ export function delPost(postId) {
   }
 }
 
-export function updatePost(postId, title, body){
-  return async (dispatch) =>{
+export function updatePost(postId, title, body) {
+  return async (dispatch) => {
     let result = await fetch(`https://simple-blog-api.crew.red/posts/${postId}`, {
       method: 'PUT',
       headers: {
@@ -117,7 +117,6 @@ export function updatePost(postId, title, body){
         body,
       })
     });
-    console.log(result);
     if (result.status === 200) {
       let json = await result.json();
       dispatch({

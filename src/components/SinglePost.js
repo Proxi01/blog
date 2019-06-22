@@ -38,14 +38,13 @@ class SinglePost extends Component {
     if (this.state.loading) {
       return <p>Loading...</p>
     }
-    console.log(this.props)
 
     return (
       <Fragment>
         <h1 className="post_title">{activePost.title}</h1>
         <div>{activePost.body}</div>
         <button onClick={() => this.handleDelete(activePost.id)}> Delete </button>
-        <button onClick={()=>this.props.history.push(`/edit/${activePost.id}`)}> Edit </button>
+        <button onClick={() => this.props.history.push(`/edit/${activePost.id}`)}> Edit </button>
 
         <div className="comments">
           Comments:
