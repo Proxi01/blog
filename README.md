@@ -10,7 +10,11 @@
 3. Name of each post on the main page is a link which brings you to specific post view
 4. On the one post view page you have next opportunities: 
   * Edit the post via Edit button
-  * Delete the post via Delete button
+  * Delete the post via the Delete button
   * Leave your comment via the form at the bottom
 5. After editing a post, you will be brought to edited post page 
-6. After deleting post you will be bringed to page with all posts
+6. After deleting a post you will be brought to page with all posts
+
+##According to the challenge
+1. Time and author of posts are not implemented because of API does not provide this information. It's possible to do with static data, but not 100% sure it's needed.
+
