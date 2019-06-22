@@ -15,6 +15,6 @@
 5. After editing a post, you will be brought to edited post page 
 6. After deleting a post you will be brought to page with all posts
 
-##According to the challenge
+## According to the challenge
 1. Time and author of posts are not implemented because of API does not provide this information. It's possible to do with static data, but not 100% sure it's needed.
 2. It's possible to improve the project by adding PropTypes to  checking all props.
