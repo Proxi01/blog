@@ -1,41 +1,22 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment } from 'react';
 
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-/*const Posts = (props)=>{
-  const posts = (props.posts.map(post=>(
-      <Fragment>
-        <Link to={`posts/${post.id}`} key={post.id} style={{display: 'block',}}>{post.title}</Link>
-        <p>{`${post.body.slice(0,50)}`} {post.body.length>50 && '...'}</p>
-      </Fragment>
-    ))
-  );
-  props.getAllPosts()
+class Posts extends React.Component {
 
-  return(
-    <Fragment>
-      {posts}
-      <Link to="/newpost"><button>Create a new post</button></Link>
-    </Fragment>
-  )
-};*/
-
-
-class Posts extends React.Component{
-
-  componentDidMount(){
+  componentDidMount() {
     this.props.getAllPosts();
   }
 
-  render(){
-    const posts = (this.props.posts.map(post=>(
-        <Fragment>
-          <Link to={`posts/${post.id}`} key={post.id} style={{display: 'block',}}>{post.title}</Link>
-          <p>{`${post.body.slice(0,50)}`} {post.body.length>50 && '...'}</p>
-        </Fragment>
-      ))
+  render() {
+    const posts = (this.props.posts.map(post => (
+      <Fragment key={post.id + 666}>
+        <Link to={`posts/${post.id}`} key={post.id} className="link">{post.title}</Link>
+        <p>{`${post.body.slice(0, 150)}`} {post.body.length > 50 && '...'}</p>
+      </Fragment>
+    ))
     );
-    return(
+    return (
       <Fragment>
         {posts}
         <Link to="/newpost"><button>Create a new post</button></Link>

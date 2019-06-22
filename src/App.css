@@ -9,8 +9,8 @@ body{
 
 .container{
   background: #ffffff;
-  width: 80%;
-  height:100vh;
+  width: 60%;
+  height:100;
   margin:10px auto;
 }
 
@@ -31,3 +31,24 @@ body{
 .post_title{
   text-align: center;
 }
+.link{
+  font-size:1.5rem;
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+.link:hover{
+  text-decoration: underline;
+}
+
+input, textarea{
+  display: block;
+  margin-left:15px;
+}
+
+textarea{
+  resize: none;
+  width: 550px;
+  height:75px;
+}
+

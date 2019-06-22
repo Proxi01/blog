@@ -1,8 +1,8 @@
-import {createStore, applyMiddleware, compose} from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import rootReducers from '../reducers';
 import thunk from 'redux-thunk';
 
-export default function configureStore(){
+export default function configureStore() {
   return createStore(
     rootReducers,
     compose(
