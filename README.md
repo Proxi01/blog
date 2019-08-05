@@ -1,5 +1,5 @@
 ## How to run install the project
-1. Clone the project `git clone https://github.com/Proxi01/forkify.git`
+1. Clone the project `git clone https://github.com/Proxi01/blog.git`
 2. Open the folder of the project 
 3. Run `npm install` command
 4. After installation run `npm start`
